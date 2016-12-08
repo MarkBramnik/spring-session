@@ -1,0 +1,9 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="calculator" class="example5.configurations.CalculatorServiceImpl"/>
+    <bean class="example5.configurations.Client">
+        <constructor-arg ref="calculator"/>
+    </bean>
+
+</beans>

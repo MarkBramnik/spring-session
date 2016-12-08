@@ -1,0 +1,10 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean class="example7.prototypes.in.singletons.PizzaSuperStarWithLookupMethod">
+        <!-- note there is a lookup method - it will create pizza implementations -->
+        <lookup-method name="preparePizza" bean="pizza"/>
+    </bean>
+    <bean id="pizza" class="example7.prototypes.in.singletons.Pizza" scope="prototype"/>
+</beans>
